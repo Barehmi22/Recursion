@@ -1,0 +1,12 @@
+ALGORITHM palindrome
+VAR
+    word : ARRAY_OF STRING[n];
+BEGIN
+    write("Please input word : " ,)
+    read(word)
+    /*compare the characters located at the ends of the word*/
+   if T[i]=T[n-1] do 
+   write("word is a palindrome")
+   else
+   write("word isn't a palindrome")
+END
