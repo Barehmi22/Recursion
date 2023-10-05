@@ -1,12 +1,24 @@
 ALGORITHM palindrome
 VAR
     word : ARRAY_OF STRING[n];
+    Palindrome : BOOLEAN;
 BEGIN
-    write("Please input word : " ,)
+    write("Please input word : ")
     read(word)
-    /*compare the characters located at the ends of the word*/
-   if T[i]=T[n-1] do 
-   write("word is a palindrome")
-   else
-   write("word isn't a palindrome")
+    
+    Palindrome := TRUE
+    
+    /* compare the characters located at the ends of the word if false break  */
+    for i := 0 to n-1 do
+        if word[i] <> word[n-i-1] then
+            Palindrome := FALSE break 
+        end if
+    end for
+    /* if trus write("Word is a palindrome")   */
+
+     if Palindrome then
+        write("Word is a palindrome")
+     else
+        write("Word isn't a palindrome")
+    end if
 END
